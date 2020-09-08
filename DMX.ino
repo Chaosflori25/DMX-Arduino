@@ -3,7 +3,7 @@
 #define RELAY2  9
 #define DE 3
 #define RE 2
-#define DEV_VERSION true // Testen ohne DMX
+#define DEV_VERSION true // test without dmx
 #define N                                              //char rxChar= 0;
 #define DMX_ADRESS 13
 #define Mosfet 16
