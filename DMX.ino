@@ -35,7 +35,7 @@ void getdmx(){//------------------------------------getdmx
 void loop(){//----------------------------------------loop
  if (DMXSerial.receive() || DEV_VERSION) {
   
-  if (running == false){  // Bei reconnect
+  if (running == false){  // at reconnect
       running = true;
       DMXSerial.receive();
      
@@ -83,9 +83,9 @@ void loop(){//----------------------------------------loop
 
       if (DMXSerial.noDataSince()>3000){
         if(running==true){ // Connection Lost
-          running = false;// benötigt um reconnect zu erkennen
+          running = false;// set flag to false to retry to connect
         }
-          delay(5000); //DMX Check alle Sekunde
+          delay(5000); //DMX Check every 5 seconds
       }
      }
    }
